@@ -16,12 +16,3 @@ Adding more features or applying techniques like oversampling could help close t
 
 A fourth feature, `passenger_count`, was added to the original three (`trip_distance`, `fare_amount`, `tip_amount`).
 A small improvement in overall accuracy was observed, increasing from 92% to 93%.
-
-**a) How can you ensure the improvement is not due to randomness or data leakage?**
-To rule out randomness, the model should be evaluated using cross-validation. If the improvement holds consistently across all folds, it is unlikely to be a random improvement.
-To rule out data leakage, it is important to check whether the newly added feature is computed from other features already in the model.
-In this dataset `passenger_count` is independent, which means it is not derived from the original 3 features.
-
-**b) What risks exist if this feature cannot be reliably generated in production?**
-If `passenger_count` is not available at prediction time, for example, because the trip has not yet ended,
-the model will either fail entirely or require a fallback.
