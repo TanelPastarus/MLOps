@@ -2,3 +2,5 @@
 .ai
 __pycache__
 .idea
+/data
+/model.joblib
