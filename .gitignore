@@ -4,4 +4,4 @@ __pycache__
 .idea
 /data
 /model.joblib
-.dvc/config
+.dvc/config.local
